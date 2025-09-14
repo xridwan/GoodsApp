@@ -50,6 +50,7 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (context) => sl<UpdateAssetCubit>()),
       ],
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         theme: ThemeData(
           appBarTheme: AppBarTheme(
             backgroundColor: Colors.white,
