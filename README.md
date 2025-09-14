@@ -1,16 +1,50 @@
-# goods_app
+# 📱 Asset Management App
 
-A new Flutter project.
+Aplikasi sederhana untuk mengelola aset (Create, Read, Update, Delete) dengan fitur pencarian.  
+Dibangun menggunakan **Flutter + Bloc (Cubit) + Clean Architecture**.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 📋 Requirements
+- Flutter SDK >= 3.0.0
+- Dart >= 3.0.0
+- Android Studio
+- Emulator / Device Android (API 21+)
+- Internet connection (untuk request API)
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 🚀 Installation
+1. **Clone repository**
+   ```bash
+   git clone https://github.com/xridwan/GoodsApp.git
+   cd GoodsApp
+   
+2. **Install Dependencies**
+    ```bash
+   flutter pub get
+   
+3. **Run App**`
+   ```bash
+   flutter run
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+4. **Build App**`
+   ```bash
+   flutter build apk --release
+   
+## Structured Directory
+lib/
+├── core/                # utils, constants, error handling
+├── data/                # data sources & repository implementation
+│   ├── datasources/
+│   ├── models/
+│   └── repositories/
+├── domain/              # entity & usecase
+│   ├── entities/
+│   ├── repositories/
+│   └── usecases/
+├── presentation/        # UI (pages, widgets, cubit)
+│   ├── cubit/
+│   ├── pages/
+│   └── widgets/
+└── main.dart
