@@ -14,8 +14,8 @@ class AssetRepositoriesImpl implements AssetRepositories {
 
   @override
   Future<Either<Failure, AssetListResponse>> getAssets({
-    required int page,
-    required int pageSize,
+    int page = 1,
+    int pageSize = 10,
     String? search,
   }) async {
     try {
@@ -24,7 +24,6 @@ class AssetRepositoriesImpl implements AssetRepositories {
         pageSize: pageSize,
         search: search,
       );
-      print("Response data asset: ${response.results.length}");
       return Right(response);
     } catch (e) {
       return Left(ServerFailure(errorMessage: e.toString()));
