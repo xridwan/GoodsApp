@@ -39,12 +39,15 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (context) => sl<TokenCubit>()),
         BlocProvider(create: (context) => sl<LogoutCubit>()),
         BlocProvider(create: (context) => sl<MeCubit>()),
+        BlocProvider(
+          create: (context) =>
+              sl<AssetsCubit>()..fetchAssets(page: 1, pageSize: 10),
+        ),
         BlocProvider(create: (context) => sl<AssetByStatusCubit>()),
         BlocProvider(create: (context) => sl<AssetByLocCubit>()),
         BlocProvider(create: (context) => sl<StatusCubit>()),
         BlocProvider(create: (context) => sl<LocationCubit>()),
         BlocProvider(create: (context) => sl<CreateAssetCubit>()),
-        BlocProvider(create: (context) => sl<AssetsCubit>()),
         BlocProvider(create: (context) => sl<DetailAssetCubit>()),
         BlocProvider(create: (context) => sl<DeleteAssetCubit>()),
         BlocProvider(create: (context) => sl<UpdateAssetCubit>()),
