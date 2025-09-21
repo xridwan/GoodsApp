@@ -7,7 +7,7 @@ class TextFieldCustomWidget extends StatelessWidget {
   final Icon? icon;
   final Icon? iconPassword;
   final bool obscureText;
-  final bool showError; // ⬅️ tambahan flag
+  final bool showError;
 
   const TextFieldCustomWidget({
     super.key,
@@ -17,7 +17,7 @@ class TextFieldCustomWidget extends StatelessWidget {
     required this.icon,
     required this.iconPassword,
     this.obscureText = false,
-    this.showError = false, // ⬅️ default false
+    this.showError = false,
   });
 
   @override
@@ -40,19 +40,17 @@ class TextFieldCustomWidget extends StatelessWidget {
               suffixIcon: iconPassword,
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
-                borderSide:
-                BorderSide(color: Colors.blue.shade300, width: 2),
+                borderSide: BorderSide(color: Colors.blue.shade300, width: 2),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
-                borderSide:
-                BorderSide(color: Colors.blue.shade300, width: 2),
+                borderSide: BorderSide(color: Colors.blue.shade300, width: 2),
               ),
             ),
           ),
         ),
         const SizedBox(height: 8),
-        if (showError && controller.text.isEmpty) // ⬅️ tampilkan error manual
+        if (showError && controller.text.isEmpty)
           const Text(
             'This form is required',
             style: TextStyle(
@@ -65,4 +63,3 @@ class TextFieldCustomWidget extends StatelessWidget {
     );
   }
 }
-

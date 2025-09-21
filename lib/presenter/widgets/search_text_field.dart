@@ -33,7 +33,7 @@ class SearchTextField extends StatelessWidget {
             borderSide: BorderSide(color: Colors.blue, width: 2),
           ),
         ),
-        onSubmitted: onSubmitted, // ⬅️ trigger fetch saat tekan enter
+        onSubmitted: onSubmitted,
       ),
     );
   }
